@@ -99,8 +99,17 @@ textBlocks[8].innerText = "Copyright Great Idea! 2018";
 // * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 // * [ ] Check your work by looking at the [original html](original.html) in the browser
 
+navbar.forEach(link => {
+  link.style.color = "green";
+})
 
-
+let nav = document.querySelector('nav');
+let anchorTag = document.createElement('a');
+let anchorbTag = document.createElement('a');
+anchorTag.innerText = ('Creators');
+anchorbTag.innerText = ('Inventions');
+nav.prepend(anchorTag);
+nav.append(anchorbTag);
 
 // ## Stretch Goals
 // * [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
