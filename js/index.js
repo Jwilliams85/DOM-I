@@ -61,8 +61,6 @@ headerline.setAttribute('src', siteContent["cta"]["img-src"])
 const middleImge = document.getElementById("middle-img");
 middleImge.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-//const navbar = document.getElementsByTagName("a");
-//navbar.setAttribute('src', siteContent["nav"]["nav-item-1"]);
 
 let navbar = document.querySelectorAll('nav a');
 navbar[0].innerText = siteContent['nav']['nav-item-1']
@@ -72,14 +70,36 @@ navbar[3].innerText = siteContent['nav']['nav-item-4']
 navbar[4].innerText = siteContent['nav']['nav-item-5']
 navbar[5].innerText = siteContent['nav']['nav-item-6']
 
+let ctaText = document.getElementsByClassName('cta-text')[0];
+ctaText.getElementsByTagName('h1')[0].innerHTML = siteContent['cta']['h1'];
+ctaText.getElementsByTagName('button')[0].innerHTML = siteContent['cta']['button'];
+
+let paragraphHeadings = document.querySelectorAll("h4");
+paragraphHeadings[0].innerText = "Features";
+paragraphHeadings[1].innerText = "Product";
+paragraphHeadings[2].innerText = "Vision";
+paragraphHeadings[3].innerText = "Features";
+paragraphHeadings[4].innerText = "About";
+paragraphHeadings[5].innerText = "Contact";
+
+let textBlocks = document.querySelectorAll("p");
+textBlocks[0].innerText = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+textBlocks[1].innerText = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+textBlocks[2].innerText = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+textBlocks[3].innerText = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+textBlocks[4].innerText = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+textBlocks[5].innerText = "123 Way 456 Street Somewhere, USA";
+textBlocks[6].innerText = "1 (888) 888-8888";
+textBlocks[7].innerText = "sales@greatidea.io";
+textBlocks[8].innerText = "Copyright Great Idea! 2018";
+
+
 // ## Task 3: Add new content
 // * [ ] Change the color of the navigation text to be green.
 // * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 // * [ ] Check your work by looking at the [original html](original.html) in the browser
 
-let ctaText = document.getElementsByClassName('cta-text')[0];
-ctaText.getElementsByTagName('h1')[0].innerHTML = siteContent['cta']['h1'];
-ctaText.getElementsByTagName('button')[0].innerHTML = siteContent['cta']['button'];
+
 
 
 // ## Stretch Goals
