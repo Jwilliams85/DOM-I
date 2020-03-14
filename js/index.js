@@ -54,18 +54,33 @@ headerline.setAttribute('src', siteContent["cta"]["img-src"])
 // * [ ] Using your selectors, update the content to match the example file.
 // * [ ] Remember to update the src attributes on images
 
-const navbar = document.getElementsByTagName("a");
-//navbar.setAttribute('src', siteContent["nav"]["nav-item-1"]);
+
+
 
 
 const middleImge = document.getElementById("middle-img");
 middleImge.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+//const navbar = document.getElementsByTagName("a");
+//navbar.setAttribute('src', siteContent["nav"]["nav-item-1"]);
+
+let navbar = document.querySelectorAll('nav a');
+navbar[0].innerText = siteContent['nav']['nav-item-1']
+navbar[1].innerText = siteContent['nav']['nav-item-2']
+navbar[2].innerText = siteContent['nav']['nav-item-3']
+navbar[3].innerText = siteContent['nav']['nav-item-4']
+navbar[4].innerText = siteContent['nav']['nav-item-5']
+navbar[5].innerText = siteContent['nav']['nav-item-6']
 
 // ## Task 3: Add new content
 // * [ ] Change the color of the navigation text to be green.
 // * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 // * [ ] Check your work by looking at the [original html](original.html) in the browser
+
+let ctaText = document.getElementsByClassName('cta-text')[0];
+ctaText.getElementsByTagName('h1')[0].innerHTML = siteContent['cta']['h1'];
+ctaText.getElementsByTagName('button')[0].innerHTML = siteContent['cta']['button'];
+
 
 // ## Stretch Goals
 // * [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
