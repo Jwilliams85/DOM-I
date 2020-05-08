@@ -61,6 +61,9 @@ headerline.setAttribute('src', siteContent["cta"]["img-src"])
 const middleImge = document.getElementById("middle-img");
 middleImge.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+middleImge.addEventListener('dblclick',(event) => {
+  event.target.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/780593/cat-lambda.png"
+})
 
 let navbar = document.querySelectorAll('nav a');
 navbar[0].innerText = siteContent['nav']['nav-item-1']
@@ -101,7 +104,11 @@ textBlocks[8].innerText = "Copyright Great Idea! 2018";
 
 navbar.forEach(link => {
   link.style.color = "green";
-})
+  
+ })
+
+
+ 
 
 let nav = document.querySelector('nav');
 let anchorTag = document.createElement('a');
@@ -111,6 +118,8 @@ anchorbTag.innerText = ('Inventions');
 nav.prepend(anchorTag);
 nav.append(anchorbTag);
 
+anchorbTag.style.color= "papayawhip"
+anchorTag.style.color= "papayawhip"
 // ## Stretch Goals
 // * [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
 // * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
